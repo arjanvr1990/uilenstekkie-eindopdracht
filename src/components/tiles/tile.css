@@ -1,0 +1,71 @@
+.tile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px;
+}
+
+
+.tile-container {
+    display: flex;
+    margin: 50px;
+}
+
+.outer-square {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    transform: rotate(45deg);
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.inner-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+}
+
+h2 {
+    transform: rotate(-45deg); /* Terugdraaien naar originele oriëntatie */
+}
+
+
+
+.TegelComponent {
+    transition: transform 0.3s;
+}
+
+.TegelComponent:hover {
+    scale: 2;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.TegelComponent:has(+ .TegelComponent:hover),
+.TegelComponent:hover + .TegelComponent {
+    scale: 1.7;
+    transition: transform 0.3s ease-in-out;
+}
+
+.TegelComponent:has(+ .TegelComponent + .TegelComponent:hover),
+.TegelComponent:hover + .TegelComponent + .TegelComponent  {
+    scale: 1.45;
+    transition: transform 0.3s ease-in-out;
+}
+
+.TegelComponent:has(+ .TegelComponent + .TegelComponent + .TegelComponent:hover),
+.TegelComponent:hover + .TegelComponent + .TegelComponent + .TegelComponent  {
+    scale: 1.2;
+    transition: transform 0.3s ease-in-out;
+}
