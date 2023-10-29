@@ -8,7 +8,7 @@ const TileComponent = () => {
             <div className="tile-container">
                 <div style={{ backgroundImage: `url(${backgroundImage})` }} className="outer-square">
                     <div className="inner-square">
-                        <h2>Titel</h2>
+                        <h2 className="tileTitle">Titel</h2>
                     </div>
                 </div>
             </div>

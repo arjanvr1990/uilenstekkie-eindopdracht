@@ -24,7 +24,7 @@ nav a:hover {
 }
 
 
-ul {
+.nav-items {
     list-style-type: none;
     flex-basis: 550px;
     display: flex;

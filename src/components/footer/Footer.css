@@ -1,0 +1,52 @@
+.footer-banner {
+    background-color: #4CAF50;
+}
+.footer-container {
+    color: white;
+    padding: 40px 0px 150px 0px;
+    text-align: center;
+    background-image: url("../../assets/img/footerBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.footer-container h4 {
+    margin: 0 0 20px;
+
+}
+
+.footer-nav {
+    list-style: none;
+}
+
+.footer-adres {
+    list-style: none;
+}
+
+
+.footer-items {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+
+}
+
+
+
+.footer-items li {
+    margin: 5px 0;
+}
+
+.footer-items a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-items a:hover {
+    color: #ddd;
+}

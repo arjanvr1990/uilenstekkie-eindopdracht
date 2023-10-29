@@ -7,7 +7,7 @@ function Navigation() {
             <div className="nav-container">
                 <h4>🏕️ Mini Camping 't Uilenstekkie</h4>
 
-                <ul>
+                <ul className="nav-items">
                     <li>Home</li>
                     <li>Omgeving</li>
                     <li>Prijzen</li>

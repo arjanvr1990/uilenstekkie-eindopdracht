@@ -1,5 +1,6 @@
 .tile-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 150px;
@@ -36,7 +37,7 @@
     top: 0;
 }
 
-h2 {
+.tileTitle {
     transform: rotate(-45deg); /* Terugdraaien naar originele oriëntatie */
 }
 
@@ -68,4 +69,23 @@ h2 {
 .TegelComponent:hover + .TegelComponent + .TegelComponent + .TegelComponent  {
     scale: 1.2;
     transition: transform 0.3s ease-in-out;
+}
+
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+    .TegelComponent:hover {
+        /* Reset de schaaltransformatie */
+        transform: none;
+    }
+
+    /* Je moet ook specifieke stijlen terugzetten voor de gecombineerde selectors */
+    .TegelComponent:hover + .TegelComponent,
+    .TegelComponent:hover + .TegelComponent + .TegelComponent,
+    .TegelComponent:hover + .TegelComponent + .TegelComponent + .TegelComponent {
+        transform: none;
+    }
+
+    /* Zorg ervoor dat de overgang ook wordt verwijderd, omdat deze geen effect heeft */
+    .TegelComponent {
+        transition: none;
+    }
 }

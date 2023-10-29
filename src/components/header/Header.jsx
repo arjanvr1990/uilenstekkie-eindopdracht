@@ -1,12 +1,27 @@
 import React from 'react';
 import './Header.css';
+import banner from "../../assets/img/banner.png";
 
-function Header({  icon, title }) {
+function Header() {
   return (
-    <header className="title-container">
-      <img src={icon} alt={title} />
-      <h1>{title}</h1>
-    </header>
+      <div className="container">
+
+          <div className="weatherApiInfo">
+              <p>weer app</p>
+          </div>
+          <div className="headerHomePage">
+              <div className="page-content">
+
+                  <h2 className="headerTitlePart1">Altijd een lekker plekkie...</h2>
+                  <img src={banner} alt=""/>
+
+                  <h2 className="headerTitlePart2">...op camping 'T Uilenstekkie</h2>
+              </div>
+          </div>
+          <div className="weatherApiInfo">
+              <p>weer app</p>
+          </div>
+      </div>
   );
 }
 
